@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle de Horas Extras</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Controle de Horas Extras</h1>
+
+        <div class="card">
+
+            <div class="info">
+                <div>
+                    <span>Início das horas extras</span>
+                    <strong>18:00</strong>
+                </div>
+
+                <div>
+                    <span>Data</span>
+                    <strong id="dataAtual"></strong>
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label for="horarioFim">
+                    Horário de término
+                </label>
+
+                <input
+                    type="time"
+                    id="horarioFim"
+                >
+
+            </div>
+
+            <button onclick="registrarHoraExtra()">
+                Registrar horas extras
+            </button>
+
+        </div>
+
+
+        <div class="resultado" id="resultado">
+
+            <span>Total de hoje</span>
+
+            <strong id="totalHoje">
+                00:00
+            </strong>
+
+        </div>
+
+
+        <div class="card historico">
+
+            <div class="titulo-historico">
+
+                <h2>Histórico</h2>
+
+                <button
+                    class="btn-limpar"
+                    onclick="limparHistorico()"
+                >
+                    Limpar tudo
+                </button>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Data</th>
+                        <th>Início</th>
+                        <th>Término</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="listaHoras">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
